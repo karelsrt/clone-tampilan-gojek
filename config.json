@@ -1,7 +1,8 @@
 {
     "modules": [
         "dasbord",
-        "home"
+        "home",
+        "coba"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

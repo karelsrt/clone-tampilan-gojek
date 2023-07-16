@@ -33,8 +33,7 @@ class DasbordView extends StatelessWidget {
                       ),
                     ),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
                           height: 30.0,
@@ -76,9 +75,6 @@ class DasbordView extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
-                                    width: 10.0,
-                                  ),
                                 ],
                               );
                             },
@@ -93,13 +89,23 @@ class DasbordView extends StatelessWidget {
             ],
           ),
           body: SingleChildScrollView(
-            child: Container(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  controller.currentView ?? const HomeView(),
-                ],
-              ),
+            controller: ScrollController(),
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16.0),
+                  child: controller.currentView ?? const HomeView(),
+                ),
+                Container(
+                  height: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/gambar/Ornament.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         );

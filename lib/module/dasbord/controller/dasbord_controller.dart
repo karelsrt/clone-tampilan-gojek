@@ -1,10 +1,6 @@
 import 'package:clone_gojek/core.dart';
-import 'package:clone_gojek/module/dasbord/widget/promo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../widget/chat.dart';
-import '../widget/pesanan.dart';
 
 class DasbordController extends GetxController {
   DasbordView? view;
